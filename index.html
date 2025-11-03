@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tonya Marie Good</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.io.png" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="favicon.io.png" alt="logo" class="logo"></a>
+      <h1 class="site-title">Tonya Marie Good</h1>
+    </div>
+
+    <!-- menu toggle (checkbox) -->
+    <input id="nav-toggle" type="checkbox" hidden>
+    <label for="nav-toggle" class="menu-icon" aria-hidden="true">☰</label>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Music. Art. Story.</h2>
+        <p>Welcome to the creative world of <strong>Tonya Marie Good</strong> songs, canvases and live shows.</p>
+        <a class="btn primary" href="gallery.html">Explore Gallery</a>
+      </div>
+
+      <div class="hero-media">
+        <!-- featured track preview -->
+        <div class="track-card">
+          <img src="cover image.png" alt="featured cover">
+          <h3>Featured Track</h3>
+          <p class="muted">From the new EP stream below</p>
+          <audio controls preload="none">
+            <source src="EP.mp4" type="audio/mp4">
+            Your browser doesn't support audio.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="a1">
+        <h3>New Releases</h3>
+        <p>Latest singles and collaborations updated regularly.</p>
+      </article>
+      <article class="a2">
+        <h3>Exhibitions</h3>
+        <p>Artworks shown in galleries and pop-ups touring Canada.</p>
+      </article>
+      <article class="a3">
+        <h3>Book an Event</h3>
+        <p>Hire for shows, commissions and workshops.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>© <span id="year"></span> Tonya Marie Good - All rights reserved.</small>
+      <small class="credit">Built by <a href="https://github.com/bignizacademy-svg/SQI-clone-site" target="_blank">Big Niz Academy</a></small>
+    </div>
+  </footer>
+
+  <script>
+    // small script to write year & basic accessible menu closing
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // close mobile nav when clicking a link
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+      const input = document.getElementById('nav-toggle');
+      if (input) input.checked = false;
+    }));
+  </script>
+</body>
+</html>

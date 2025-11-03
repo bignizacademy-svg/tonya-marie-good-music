@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tonya Marie Good Music & Art</title>
+  <meta name="description" content="Tonya Marie Good — musician, artist, & animal lover. Music, art, and graphic design." />
+  <link rel="stylesheet" href="tonya marie.css" />
+  <link rel="shortcut icon" href="favicon.io.png" type="image/x-icon">
+</head>
+<body>
+  <div class="site" id="top">
+    <header class="nav" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><span>TM</span></div>
+        <div class="brand-text">
+          <div class="name">Tonya Marie</div>
+          <div class="subtitle">Music · Art · Animal Lover</div>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <h1>Tonya Marie Good Music, Nature & Art</h1>
+          <p class="lead">Singer-songwriter, visual artist and animal advocate. Blending acoustic soul with bold graphic art inspired by nature and pets.</p>
+
+          <div class="cta-row">
+            <a class="btn" href="#music">Listen</a>
+            <a class="btn outline" href="#contact">Book / Collab</a>
+          </div>
+
+          <div class="accent-strip" aria-hidden="true">
+            <div class="accent-left">
+              <strong>New single:</strong> <span class="muted">Tears of a Cowgirl</span> on streaming platforms.
+            </div>
+            <div class="accent-right">Leopard • Earthy • Noir</div>
+          </div>
+
+          <div class="bio">
+            <p>Tonya is active on Facebook and YouTube (acoustic covers & originals). She often shares nature clips and pet moments that warm, outdoorsy energy appears in her art and music.</p>
+          </div>
+        </div>
+
+        <aside class="profile" aria-labelledby="artist-name">
+          <!-- Replace src with Tonya's real portrait or hero photo -->
+          <img src="profile.jpg" alt="Tonya Marie portrait" />
+          <h2 id="artist-name">Tonya Marie</h2>
+          <div class="role">Singer • Songwriter • Visual Artist</div>
+
+          <div class="tags">
+            <span class="tag">Acoustic</span>
+            <span class="tag">Indie Soul</span>
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Pet Lover</span>
+          </div>
+
+          <div class="socials">
+            <!-- Fill href with real profile links -->
+            <a href="https://www.facebook.com/tonyamariemusic" target="_blank" rel="noopener">Facebook</a>
+            <a href="#" target="_blank" rel="noopener">YouTube</a>
+            <a href="#" target="_blank" rel="noopener">Spotify</a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MUSIC: CSS-only accordion (radio => single open) -->
+      <section id="music" class="section">
+        <h3 class="section-title">Music</h3>
+
+        <div class="columns">
+          <div class="tracks" role="list" aria-label="Tracks">
+            <!-- Radio inputs share the same name so only one can be open at a time -->
+            <div class="track">
+              <input type="radio" name="track" id="track1" class="track-radio" />
+              <label for="track1" class="track-label">
+                <div class="info">
+                  <div class="title">Tears of a Cowgirl</div>
+                  <div class="meta">Single • 2025 • 3:45</div>
+                </div>
+                <span class="chev" aria-hidden="true">▾</span>
+              </label>
+              <div class="player">
+                        <video src="video to play.mp4" controls loop></video>
+                <p class="track-desc">A reflective acoustic single available on streaming platforms.</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <input type="radio" name="track" id="track2" class="track-radio" />
+              <label for="track2" class="track-label">
+                <div class="info">
+                  <div class="title">Keep You Down</div>
+                  <div class="meta">EP • 2023 • 4 tracks</div>
+                </div>
+                <span class="chev" aria-hidden="true">▾</span>
+              </label>
+              <div class="player">
+                <!-- <iframe src="https://open.spotify.com/embed/track/REPLACE_TRACK_ID" title="Keep You Down"></iframe> -->
+                 
+             <video src="acoustic.mp4" controls></video>
+                <p class="track-desc">A moody, soulful piece with layered harmonies.</p>
+              </div>
+            </div>
+
+            <div class="track note">
+              <p class="small">Tip: only one track opens at a time..</p>
+            </div>
+          </div>
+
+          <aside>
+            <h4>Featured Playlist</h4>
+            <div class="playlist-card">
+              <!-- Replace playlist embed id -->
+              <!-- <iframe src="https://open.spotify.com/embed/playlist/REPLACE_PLAYLIST_ID" title="Tonya's Playlist"></iframe> -->
+               <video src="acoustic.mp4" controls></video>
+            </div>
+
+            <div class="mini-cta">
+              <a class="btn outline" href="#contact">Hire for Session</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- GALLERY: CSS filters using radio + lightbox :target -->
+      <section id="gallery" class="section">
+        <h3 class="section-title">Art & Design</h3>
+
+        <!-- filter radios -->
+        <div class="filters" role="tablist" aria-label="Gallery filters">
+          <input type="radio" name="filter" id="f-all" checked />
+          <!-- <label for="f-all" class="filter">All</label> -->
+
+          <input type="radio" name="filter" id="f-art" />
+          <label for="f-art" class="filter">Art</label>
+
+          <input type="radio" name="filter" id="f-graphics" />
+          <label for="f-graphics" class="filter">Graphics</label>
+        </div>
+
+        <div class="gallery">
+          <!-- each .item has a data-type class; CSS will show/hide based on checked filter -->
+          <a href="#img1" class="item art"><img src="logo2.png" alt="Sketch 1"></a>
+
+          <a href="#img2" class="item graphics"><img src="colored one.png" alt="Design 1"></a>
+
+          <a href="#img3" class="item art"><img src="favicon.io.png" alt="Painting 1"></a>
+
+
+          <a href="#img4" class="item graphics"><img src="painting.jpg" alt="Poster 1"></a>
+          <a href="#img5" class="item art"><img src="paint drawings.jpg" alt="Sketch 2"></a>
+          <a href="#img6" class="item graphics"><img src="second paint drawing.jpg" alt="Logo 1"></a>
+        </div>
+
+        <!-- Lightbox modals via :target -->
+        <div id="img1" class="lightbox"><a class="close" href="#gallery">✕</a><img src="logo2.png" alt=""></div>
+        <div id="img2" class="lightbox"><a class="close" href="#gallery">✕</a><img src="colored one.png" alt=""></div>
+        <div id="img3" class="lightbox"><a class="close" href="#gallery">✕</a><img src="favicon.io.png" alt=""></div>
+        <div id="img4" class="lightbox"><a class="close" href="#gallery">✕</a><img src="painting.jpg" alt=""></div>
+        <div id="img5" class="lightbox"><a class="close" href="#gallery">✕</a><img src="paint drawings.jpg" alt=""></div>
+        <div id="img6" class="lightbox"><a class="close" href="#gallery">✕</a><img src="second paint drawing.jpg" alt=""></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <h3 class="section-title">Services</h3>
+        <div class="columns">
+          <div class="service-card">
+            <h4>Music Sessions</h4>
+            <p>Recording, songwriting, vocal sessions, livestream appearances. Custom packages available.</p>
+            <ul>
+              <li>Single recording + mix</li>
+              <li>Songwriting collab (hourly)</li>
+              <li>Performance for events</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h4>Visual & Graphic Design</h4>
+            <p>Cover art, posters, logos, social media kits artwork that pairs with the music mood.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h3 class="section-title">Contact</h3>
+        <div class="contact-grid">
+          <form class="contact-form" action="#" method="POST" aria-label="Contact form">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" rows="5" placeholder="Message (booking, collab, design)" required></textarea>
+            <!-- Replace action with Formspree/Netlify/your endpoint to actually send -->
+            <button class="btn" type="submit">Send message</button>
+          </form>
+
+          <aside class="contact-info">
+            <h4>Quick links & booking</h4>
+            <p>Facebook: <a href="https://www.facebook.com/tonyamariemusic" target="_blank">tonyamariemusic</a></p>
+            <h4>E-mail</h4>
+            <p>G-mail: <a href="tonyamariemusic@gmail.com"> tonyamariemusic@gmail.com</a></p>
+            <div class="mini-cta">
+              <a class="btn outline" href="#top">Back to top</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <strong>Tonya Marie</strong> — Music & Art</div>
+      <div class="foot-right">Built with ❤️ • Pure HTML & CSS</div>
+    </footer>
+  </div>
+</body>
+</html>

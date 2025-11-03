@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery-Tonya Marie Good</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.io.png" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="favicon.io.png" alt="logo" class="logo"></a>
+      <h1 class="site-title">Tonya Marie Good</h1>
+    </div>
+    <input id="nav-toggle" type="checkbox" hidden>
+    <label for="nav-toggle" class="menu-icon">☰</label>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Gallery</h2>
+
+    <!-- simple tabs (anchor links) -->
+    <div class="tabs">
+      <a href="logo2.png" class="tab">Images</a>
+      <a href="acoustic.mp4" class="tab">Videos</a>
+    </div>
+
+    <section id="images" class="gallery-grid">
+      <!-- image cards (click opens CSS lightbox using :target) -->
+      <figure>
+        <a href="#img1"><img src="painting.jpg" alt="artwork 1"></a>
+        <figcaption>Artwork 1</figcaption>
+      </figure>
+      <figure>
+        <a href="#img2"><img src="paint drawings.jpg" alt="artwork 2"></a>
+        <figcaption>Artwork 2</figcaption>
+      </figure>
+
+      <!-- lightbox targets -->
+      <div id="img1" class="lightbox"><a class="close" href="#images">×</a><img src="painting.jpg" alt=""><p>Artwork 1 — description</p></div>
+      <div id="img2" class="lightbox"><a class="close" href="#images">×</a><img src="paint drawings.jpg" alt=""><p>Artwork 2 — description</p></div>
+    </section>
+
+    <section id="videos" class="gallery-grid videos">
+      <div class="video-card">
+        <video controls width="100%" preload="none">
+          <source src="video to play.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 video.
+        </video>
+        <h4>Music Video — Track 1</h4>
+      </div>
+
+      <div class="video-card">
+        <video controls width="100%" preload="none">
+          <source src="EP.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 video.
+        </video>
+        <h4>Live Clip — Studio</h4>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>© <span id="year-gallery"></span> Tonya Marie Good</small>
+      <small class="credit">Built by <a href="https://github.com/yourusername" target="_blank">Big Niz Academy</a></small>
+    </div>
+  </footer>
+  <script>document.getElementById('year-gallery').textContent = new Date().getFullYear();</script>
+</body>
+</html>
