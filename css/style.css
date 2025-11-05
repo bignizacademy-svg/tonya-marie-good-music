@@ -418,7 +418,9 @@ body{
   height: 25px;
   margin:0 auto; 
   display:flex; justify-content:space-between; 
-  gap:10px; align-items:center; }
+  gap:10px; 
+  align-items:center; 
+}
 
 /* ========== ANIMATIONS ========== */
 @keyframes float {
@@ -509,5 +511,15 @@ body{
   .btn1 {
     font-size: 15px;
     padding: 5px 25px;
+  }
+}
+
+@media (max-width:442px) {
+  .site-header {
+    gap: 50px;
+    padding: 10px 20px;
+  }
+  .logo {
+    margin-right: 10px;
   }
 }
