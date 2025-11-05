@@ -33,7 +33,7 @@ body{
   gap: 50px;
   align-items: center;
   justify-content: center;
-  margin: 250px 0px 200px 0px;
+  margin: 150px 0px 198px 0px;
 }
 
 .bio-left img {
@@ -65,17 +65,22 @@ body{
 
 
 .bio-right h2 {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .bio-right p {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-.bio-right p, li {
-    line-height: 34px;
+#li {
+  margin-top: 20px;
 }
+
+.bio-right p, li {
+    line-height: 29px;
+}
+
 
 /* container helper */
 .container{
@@ -420,6 +425,17 @@ body{
   display:flex; justify-content:space-between; 
   gap:10px; 
   align-items:center; 
+}
+
+.facebook {
+  background-color: #eda660;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 20px;
+  margin: 50px 10px 50px 0px;
+  border-radius: 5px;
+  outline: 1px solid #3a2202;
 }
 
 /* ========== ANIMATIONS ========== */
